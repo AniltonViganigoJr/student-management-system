@@ -1,0 +1,3 @@
+db.url = jdbc:postgresql://localhost:5432/<DATA_BASE_NAME>
+db.username = <DB_USER>
+db.password = <DB_PASS>
