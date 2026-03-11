@@ -99,7 +99,7 @@ public class AlunoRepository {
 
         try (Connection conn = ConnectionFactory.getConnection();
                 PreparedStatement stmt = conn.prepareStatement(sql)) {
-
+            
             stmt.setString(1, aluno.getNome());
             stmt.setString(2, aluno.getCpf());
             stmt.setDate(3, Date.valueOf(aluno.getDataNascimento()));
