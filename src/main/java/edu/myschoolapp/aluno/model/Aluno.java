@@ -12,7 +12,7 @@ import edu.myschoolapp.aluno.exceptions.RegraDeNegocioException;
 public class Aluno {
 
     private static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-    private final Long id;
+    private Long id;
     private String nome;
     private String cpf;
     private LocalDate dataNascimento;
@@ -20,7 +20,18 @@ public class Aluno {
     private boolean ativo;
     private String telefone;
 
-    public Aluno(Long id, String nome, String cpf, LocalDate dataNascimento, String email,
+    public Aluno(String nome, String cpf, LocalDate dataNascimento, String email,
+            boolean ativo, String telefone) {
+
+        this.nome = validarCampoObrigatorio(nome, "Nome");
+        this.cpf = validarCPF(cpf);
+        this.dataNascimento = validarDataNascimento(dataNascimento);
+        this.email = validarCampoObrigatorio(email, "E-mail");
+        this.ativo = ativo;
+        this.telefone = validarCampoObrigatorio(telefone, "Telefone");
+    
+    }
+    public Aluno(Long id,String nome, String cpf, LocalDate dataNascimento, String email,
             boolean ativo, String telefone) {
 
         this.id = validarId(id);
