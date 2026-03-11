@@ -18,8 +18,12 @@ public class AlunoService {
         alunoRepository.salvarAluno(aluno);
     }
 
-    public List<Aluno> listarAlunosByStatus(boolean ativo) {
-        return alunoRepository.listarAlunosByStatus(ativo);
+    public List<Aluno> listarAlunosAtivos() {
+        return alunoRepository.listarAlunosByStatus(true);
+    }
+    
+    public List<Aluno> listarAlunosInativos() {
+        return alunoRepository.listarAlunosByStatus(false);
     }
 
     public void ativarAluno(Long id) {
