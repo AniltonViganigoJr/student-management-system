@@ -21,8 +21,8 @@ public class RelatorioService {
         
         Path downloads = Path.of(System.getProperty("user.home"), "Downloads");
 
-        List<Aluno> ativos = alunoService.listarAlunosByStatus(true);
-        List<Aluno> inativos = alunoService.listarAlunosByStatus(false);
+        List<Aluno> ativos = alunoService.listarAlunosAtivos();
+        List<Aluno> inativos = alunoService.listarAlunosAtivos();
 
 
         try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(downloads + "\\Relacao_alunos.txt"))) {
