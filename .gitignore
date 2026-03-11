@@ -1,0 +1,57 @@
+# ==============================
+# Java
+# ==============================
+
+# Compilação
+*.class
+target/
+build/
+out/
+
+# Pacotes
+*.jar
+*.war
+*.nar
+*.ear
+
+# Logs
+*.log
+hs_err_pid*
+replay_pid*
+
+# ==============================
+# IDEs
+# ==============================
+
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# ==============================
+# Sistema Operacional
+# ==============================
+
+.DS_Store
+Thumbs.db
+
+# ==============================
+# Arquivos temporários
+# ==============================
+
+*.tmp
+*.swp
+
+# ==============================
+# Configurações sensíveis
+# ==============================
+
+src/main/resources/db.properties
+
+# ==============================
+# Docker
+# ==============================
+
+docker-data/
+postgres-data/
